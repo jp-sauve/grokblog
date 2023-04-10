@@ -1,9 +1,6 @@
 package ca.grokology.blog
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.Id
-import jakarta.persistence.ManyToOne
+import jakarta.persistence.*
 import java.time.LocalDateTime
 
 @Entity
@@ -17,6 +14,7 @@ class Article(
     @Id @GeneratedValue var id: Long? = null
 )
 
+@Table(name = "users")
 @Entity
 class User(
     var login: String,
